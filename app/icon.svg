@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- TODO: replace with the school's real favicon/logo mark once supplied. -->
+  <rect width="64" height="64" rx="14" fill="#1E4D2B"/>
+  <path d="M32 11 C17 19 10.5 32 13 47 C28.5 45 39 34.5 41 17.5 C41.3 13.5 38.5 11.5 32 11 Z" fill="#FAF6EE"/>
+  <path d="M15 46 C24 34.5 32 24 40 13.5" stroke="#1E4D2B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>
