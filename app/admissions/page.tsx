@@ -33,13 +33,13 @@ const STEPS: Array<{ icon: LucideIcon; step: string; title: string; text: string
     icon: MessageCircle,
     step: "1",
     title: "Inquire",
-    text: "Call, WhatsApp, visit the office or use the form below. We respond within one to two school days.",
+    text: "Call, WhatsApp, visit the office or use the form above. We respond within one to two school days.",
   },
   {
     icon: PenLine,
     step: "2",
     title: "Submit Form",
-    text: "Complete the registration & inquiry form (below). A small processing fee confirms your application.",
+    text: "Complete the registration & inquiry form (above). A small processing fee confirms your application.",
   },
   {
     icon: ClipboardCheck,
@@ -121,8 +121,91 @@ export default function AdmissionsPage() {
       <PageHeader
         crumb="Admissions"
         title="Admissions & Registration"
-        description="Four simple steps stand between you and a place at The Green Peace School. We will walk through every one of them with you."
+        description="Four simple steps stand between you and a place at The Green Peace School. Start with the form — we will walk through every step with you."
       />
+
+      {/* --------------------------------- The form ---------------------------------
+          First thing on the page: the action comes before the theory, so the
+          page reads as a progression — apply → how it works → what to bring. */}
+      <section
+        id="inquiry-form"
+        aria-labelledby="inquiry-heading"
+        className="py-16 sm:py-24"
+      >
+        <Container className="grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:gap-14">
+          <div>
+            <SectionHeading
+              id="inquiry-heading"
+              align="left"
+              eyebrow="Registration & inquiry"
+              title="Take the first step"
+              description="Fill this form and our admissions team will contact you within one to two school days. No commitment — just a conversation."
+            />
+            <h3 className="mt-10 text-sm font-bold uppercase tracking-wider text-text">
+              What happens next
+            </h3>
+            <ul className="mt-4 space-y-4">
+              {[
+                "We call or WhatsApp you to arrange a visit or assessment.",
+                "You receive the outcome within one week — with clear next steps.",
+                "Enrolment takes a quiet afternoon: forms, fees, uniforms, books. Done.",
+              ].map((item, i) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2
+                    className="mt-0.5 h-5 w-5 shrink-0 text-primary"
+                    aria-hidden="true"
+                  />
+                  <span className="leading-relaxed text-text-muted">
+                    <span className="sr-only">Step {i + 1}: </span>
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-10 rounded-2xl border border-line bg-white p-6 shadow-card">
+              <h3 className="font-semibold text-text">Prefer to talk?</h3>
+              <p className="mt-2 text-sm leading-relaxed text-text-muted">
+                Call{" "}
+                <a
+                  href={`tel:${siteConfig.phones[0].number.replace(/\s/g, "")}`}
+                  className="font-semibold text-primary underline"
+                >
+                  {siteConfig.phones[0].number}
+                </a>{" "}
+                or{" "}
+                <a
+                  href={siteConfig.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-primary underline"
+                >
+                  WhatsApp us
+                </a>{" "}
+                — we are happy to answer questions about fees, dates and the
+                admission process.
+              </p>
+            </div>
+          </div>
+
+          <Reveal>
+            <div className="rounded-3xl border border-line bg-white p-6 shadow-card sm:p-10">
+              <h2 className="font-serif text-2xl text-text">
+                Registration & Inquiry Form
+              </h2>
+              <p className="mt-1 text-sm text-text-muted">
+                Fields marked{" "}
+                <span className="font-semibold text-red-600" aria-hidden="true">
+                  *
+                </span>{" "}
+                <span className="sr-only">(asterisk) are</span> required.
+              </p>
+              <div className="mt-8">
+                <InquiryForm />
+              </div>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
 
       {/* ------------------------------- The process ------------------------------- */}
       <section aria-labelledby="process-heading" className="py-16 sm:py-24">
@@ -203,87 +286,6 @@ export default function AdmissionsPage() {
               </p>
               <div className="mt-6">
                 <Accordion items={FAQ} />
-              </div>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
-      {/* --------------------------------- The form --------------------------------- */}
-      <section
-        id="inquiry-form"
-        aria-labelledby="inquiry-heading"
-        className="py-16 sm:py-24"
-      >
-        <Container className="grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:gap-14">
-          <div>
-            <SectionHeading
-              id="inquiry-heading"
-              align="left"
-              eyebrow="Registration & inquiry"
-              title="Take the first step"
-              description="Fill this form and our admissions team will contact you within one to two school days. No commitment — just a conversation."
-            />
-            <h3 className="mt-10 text-sm font-bold uppercase tracking-wider text-text">
-              What happens next
-            </h3>
-            <ul className="mt-4 space-y-4">
-              {[
-                "We call or WhatsApp you to arrange a visit or assessment.",
-                "You receive the outcome within one week — with clear next steps.",
-                "Enrolment takes a quiet afternoon: forms, fees, uniforms, books. Done.",
-              ].map((item, i) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2
-                    className="mt-0.5 h-5 w-5 shrink-0 text-primary"
-                    aria-hidden="true"
-                  />
-                  <span className="leading-relaxed text-text-muted">
-                    <span className="sr-only">Step {i + 1}: </span>
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-10 rounded-2xl border border-line bg-white p-6 shadow-card">
-              <h3 className="font-semibold text-text">Prefer to talk?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-text-muted">
-                Call{" "}
-                <a
-                  href={`tel:${siteConfig.phones[0].number.replace(/\s/g, "")}`}
-                  className="font-semibold text-primary underline"
-                >
-                  {siteConfig.phones[0].number}
-                </a>{" "}
-                or{" "}
-                <a
-                  href={siteConfig.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-primary underline"
-                >
-                  WhatsApp us
-                </a>{" "}
-                — we are happy to answer questions about fees, dates and the
-                admission process.
-              </p>
-            </div>
-          </div>
-
-          <Reveal>
-            <div className="rounded-3xl border border-line bg-white p-6 shadow-card sm:p-10">
-              <h2 className="font-serif text-2xl text-text">
-                Registration & Inquiry Form
-              </h2>
-              <p className="mt-1 text-sm text-text-muted">
-                Fields marked{" "}
-                <span className="font-semibold text-red-600" aria-hidden="true">
-                  *
-                </span>{" "}
-                <span className="sr-only">(asterisk) are</span> required.
-              </p>
-              <div className="mt-8">
-                <InquiryForm />
               </div>
             </div>
           </Reveal>

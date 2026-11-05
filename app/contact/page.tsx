@@ -74,7 +74,7 @@ const INFO_CARDS: Array<{
     lines: (
       <ul className="space-y-2">
         <li>
-          <a href={`mailto:${siteConfig.email}`} className="font-semibold text-primary underline">
+          <a href={`mailto:${siteConfig.email}`} className="break-all font-semibold text-primary underline">
             {siteConfig.email}
           </a>
           <span className="block text-xs text-text-muted">General enquiries</span>
@@ -82,7 +82,7 @@ const INFO_CARDS: Array<{
         <li>
           <a
             href={`mailto:${siteConfig.admissionsEmail}`}
-            className="font-semibold text-primary underline"
+            className="break-all font-semibold text-primary underline"
           >
             {siteConfig.admissionsEmail}
           </a>
