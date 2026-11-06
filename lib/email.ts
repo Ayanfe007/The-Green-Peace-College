@@ -69,7 +69,7 @@ function detailRows(rows: Array<[string, string | undefined | null]>): string {
 }
 
 function automatedNote(): string {
-  return `<p style="margin:24px 0 0;color:#5B6B60;font-size:13px">This is an automated message — please don't reply to this email. To reach us, call ${siteConfig.phones[0].number} or visit ${siteConfig.url}.</p>`;
+  return `<p style="margin:24px 0 0;color:#5B6B60;font-size:13px">This is an automated message. Please don't reply to this email. To reach us, call ${siteConfig.phones[0].number} or visit ${siteConfig.url}.</p>`;
 }
 
 /* --------------------------------- messages --------------------------------- */
@@ -101,7 +101,7 @@ function autoReplyBody(data: InquiryData): string {
   <p>Here is what happens next:</p>
   <ol style="padding-left:20px;margin:8px 0">
     <li>Our admissions team will contact you within <strong>one to two school days</strong> using your preferred method (${escapeHtml(data.contactMethod)}).</li>
-    <li>We will arrange a short visit or assessment — relaxed and friendly, especially for our nursery and primary pupils.</li>
+    <li>We will arrange a short visit or assessment. It will be relaxed and friendly, especially for our nursery and primary pupils.</li>
     <li>Once a place is confirmed, we will send you the enrolment steps (forms, fees, uniforms and books).</li>
   </ol>
   <p>Questions in the meantime? Call ${escapeHtml(siteConfig.phones[0].number)} or simply reply to this email.</p>
@@ -164,12 +164,12 @@ export async function deliverInquiry(data: InquiryData): Promise<DeliverResult> 
   const results = await Promise.allSettled([
     sendEmail(
       EMAIL_TO,
-      `[Inquiry] ${data.childName} — ${data.grade} (from ${data.parentName})`,
+      `[Inquiry] ${data.childName}, ${data.grade} (from ${data.parentName})`,
       layout("New admission inquiry", inquiryBody(data))
     ),
     sendEmail(
       data.email,
-      "We received your admission inquiry — The Green Peace School",
+      "We received your admission inquiry: The Green Peace School",
       layout("Thank you for enquiring", autoReplyBody(data))
     ),
   ]);

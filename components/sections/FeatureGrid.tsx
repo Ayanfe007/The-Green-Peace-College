@@ -17,7 +17,7 @@ const FEATURES: Array<{ icon: LucideIcon; title: string; text: string }> = [
   {
     icon: Users,
     title: "Qualified & Caring Teachers",
-    text: "Experienced, trained educators who know every child by name and champion their growth — in the classroom and beyond it.",
+    text: "Experienced, trained educators who know every child by name and champion their growth, in the classroom and beyond it.",
   },
   {
     icon: ShieldCheck,
@@ -37,7 +37,7 @@ const FEATURES: Array<{ icon: LucideIcon; title: string; text: string }> = [
   {
     icon: UsersRound,
     title: "Small Class Sizes",
-    text: "A maximum of 20 pupils per class (15 in Nursery) — so no child is ever lost in the crowd, and every voice is heard.",
+    text: "A maximum of 20 pupils per class (15 in Nursery), so no child is ever lost in the crowd and every voice is heard.",
   },
   {
     icon: Trophy,
@@ -60,7 +60,7 @@ export function FeatureGrid() {
           id="features-heading"
           eyebrow="Why families choose us"
           title="Everything a child needs to grow"
-          description="Six promises we make to every family in the Green Peace family — and keep, every single term."
+          description="Six promises we make to every family in the Green Peace family, and keep every single term."
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((feature, i) => {

@@ -20,7 +20,7 @@ import { siteConfig } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Visit, call, email or WhatsApp The Green Peace School — address, phone numbers, opening hours, map and a quick contact form.",
+    "Visit, call, email or WhatsApp The Green Peace School. Address, phone numbers, opening hours, map and a quick contact form.",
   alternates: { canonical: canonicalUrl("/contact") },
 };
 
@@ -118,7 +118,7 @@ export default function ContactPage() {
       <PageHeader
         crumb="Contact"
         title="Contact Us"
-        description="Questions, visits or a simple hello — however you reach us, a real person will answer."
+        description="Questions, visits or a simple hello. However you reach us, a real person will answer."
       />
 
       {/* ------------------------------- Info cards ------------------------------- */}

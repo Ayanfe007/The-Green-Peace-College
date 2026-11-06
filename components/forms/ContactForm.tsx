@@ -59,7 +59,7 @@ export function ContactForm() {
         className="rounded-2xl border border-primary-200 bg-primary-50 p-8 text-center sm:p-10"
       >
         <CheckCircle2 className="mx-auto h-12 w-12 text-primary" aria-hidden="true" />
-        <h3 className="mt-4 font-serif text-2xl text-text">Message sent — thank you!</h3>
+        <h3 className="mt-4 font-serif text-2xl text-text">Message sent. Thank you!</h3>
         <p className="mx-auto mt-3 max-w-md leading-relaxed text-text-muted">
           We read every message and usually reply within one school day.
         </p>
@@ -81,8 +81,8 @@ export function ContactForm() {
         >
           <TriangleAlert className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
           <p>
-            <strong>Something went wrong.</strong> Your message was not sent —
-            please try again, or call us directly.
+            <strong>Something went wrong.</strong> Your message was not sent.
+            Please try again, or call us directly.
           </p>
         </div>
       )}

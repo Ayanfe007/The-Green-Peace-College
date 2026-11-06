@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "Cookie Policy",
   description:
-    "How The Green Peace School's website uses cookies — in short: no tracking or advertising cookies, and one third-party map on the Contact page.",
+    "How The Green Peace School's website uses cookies. In short: no tracking or advertising cookies, and one third-party map on the Contact page.",
   alternates: { canonical: canonicalUrl("/cookies") },
 };
 
@@ -19,7 +19,7 @@ const SECTIONS: Array<{ title: string; body: React.ReactNode }> = [
     body: (
       <p>
         Cookies are small text files that a website stores on your
-        device so it can remember things between visits — like your
+        device so it can remember things between visits, like your
         preferences. You can see and manage cookies in your browser
         settings at any time.
       </p>
@@ -39,7 +39,7 @@ const SECTIONS: Array<{ title: string; body: React.ReactNode }> = [
         </p>
         <ul className="mt-3 list-disc space-y-1.5 pl-6">
           <li>
-            <strong>Google Maps</strong> — the embedded map on the{" "}
+            <strong>Google Maps</strong>: the embedded map on the{" "}
             <Link href="/contact" className="font-semibold text-primary underline">
               Contact page
             </Link>{" "}
@@ -93,7 +93,7 @@ const SECTIONS: Array<{ title: string; body: React.ReactNode }> = [
         You can accept or block cookies through your browser settings
         (usually under “Privacy” or “Cookies”). Blocking all cookies may
         prevent the embedded map from displaying, but every other part
-        of the Website — including the admission forms — works normally
+        of the Website (including the admission forms) works normally
         without cookies.
       </p>
     ),
@@ -128,7 +128,7 @@ export default function CookiesPage() {
       <PageHeader
         crumb="Cookies"
         title="Cookie Policy"
-        description="In short: no tracking or advertising cookies — just a third-party map on the Contact page."
+        description="In short: no tracking or advertising cookies, just a third-party map on the Contact page."
       />
       <section className="py-16 sm:py-24">
         <Container className="max-w-3xl">

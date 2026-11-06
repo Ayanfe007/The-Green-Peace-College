@@ -28,7 +28,7 @@ import { canonicalUrl } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Academics",
   description:
-    "Nursery, Primary and Secondary education at The Green Peace School — curriculum focus, subjects, co-curricular activities, facilities and a typical school day.",
+    "Nursery, Primary and Secondary education at The Green Peace School: curriculum focus, subjects, co-curricular activities, facilities and a typical school day.",
   alternates: { canonical: canonicalUrl("/academics") },
 };
 
@@ -83,7 +83,7 @@ const PROGRAMS: Program[] = [
       "Primary is where foundations are built. We pair a strong, joyful academic core with continuous assessment and a wide net of co-curriculars, so each child finds at least one thing they are wonderful at.",
     focusTitle: "How we assess",
     focus: [
-      "Continuous, low-pressure assessment — no child is ever surprised",
+      "Continuous, low-pressure assessment: no child is ever surprised",
       "Written end-of-term examinations with a full report every term",
       "Reading & writing progress tracked from Primary 1",
       "Primary 6: dedicated BECE preparation in the final year",
@@ -306,7 +306,7 @@ export default function AcademicsPage() {
       <PageHeader
         crumb="Academics"
         title="Academics"
-        description="How we teach at The Green Peace School — from the first phonics lesson to the final WAEC hall."
+        description="How we teach at The Green Peace School, from the first phonics lesson to the final WAEC hall."
       />
 
       {/* Intro */}
@@ -315,7 +315,7 @@ export default function AcademicsPage() {
           <SectionHeading
             eyebrow="Our teaching approach"
             title="Learn by doing, grow by being known"
-            description="Across all three levels we keep three things constant: small classes where every voice is heard, teachers who assess to help (not to judge), and a calm, respectful environment where mistakes are part of learning — not the end of it."
+            description="Across all three levels we keep three things constant: small classes where every voice is heard, teachers who assess to help (not to judge), and a calm, respectful environment where mistakes are part of learning, not the end of it."
           />
         </Container>
       </section>
@@ -339,7 +339,7 @@ export default function AcademicsPage() {
             id="coheading"
             eyebrow="Beyond the classroom"
             title="Co-curricular activities"
-            description="Every pupil takes part in at least one club or team each term — because character is built in practice, not just in lessons."
+            description="Every pupil takes part in at least one club or team each term, because character is built in practice, not just in lessons."
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {CO_CURRICULARS.map((item, i) => {
@@ -367,7 +367,7 @@ export default function AcademicsPage() {
             id="facilities-heading"
             eyebrow="Where it happens"
             title="Our facilities"
-            description="Spaces designed for how children actually learn — by looking, touching, building and playing."
+            description="Spaces designed for how children actually learn: by looking, touching, building and playing."
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
             {FACILITIES.map((facility, i) => (
@@ -403,7 +403,7 @@ export default function AcademicsPage() {
                 align="left"
                 eyebrow="A day at our school"
                 title="The rhythm of a school day"
-                description="Calm, structured and predictable — the kind of day children can settle into and parents can plan around."
+                description="Calm, structured and predictable, the kind of day children can settle into and parents can plan around."
               />
               <p className="mt-6 rounded-2xl border border-line bg-white p-5 text-sm leading-relaxed text-text-muted">
                 <Clock className="mr-2 inline h-4 w-4 text-primary" aria-hidden="true" />
@@ -434,7 +434,7 @@ export default function AcademicsPage() {
 
       <CTABanner
         title="Ready to join the Green Peace family?"
-        text="Submit an inquiry and our admissions team will walk you through the whole process — visit, assessment and enrolment."
+        text="Submit an inquiry and our admissions team will walk you through the whole process: visit, assessment and enrolment."
         ctaLabel="Start Your Application"
         ctaHref="/admissions"
       />

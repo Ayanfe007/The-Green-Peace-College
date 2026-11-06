@@ -30,7 +30,7 @@ export default function Error({
           <p className="mt-3 leading-relaxed text-text-muted">
             An unexpected error occurred
             {error.digest ? ` (reference: ${error.digest})` : ""}. Please try
-            again — if it keeps happening, give us a call and we&apos;ll sort
+            again. If it keeps happening, give us a call and we&apos;ll sort
             it out.
           </p>
           <div className="mt-8">

@@ -59,12 +59,12 @@ export default function HomePage() {
                 id="welcome-heading"
                 className="mt-2 font-serif text-3xl leading-tight text-text sm:text-4xl"
               >
-                A little school with a big heart — and a big standard.
+                A little school with a big heart, and a big standard.
               </h2>
               <p className="mt-4 leading-relaxed text-text-muted">
                 At {siteConfig.name}, every child is known by name. We are
                 teachers and parents working side by side in bright, calm
-                classrooms, making sure learning is joyful — and never
+                classrooms, making sure learning is joyful, and never
                 frightening.
               </p>
               <p className="mt-3 leading-relaxed text-text-muted">

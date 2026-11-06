@@ -10,19 +10,19 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 const TESTIMONIALS = [
   {
     quote:
-      "From the first day, our daughter felt safe and loved. The teachers know her by name and tell us exactly how she is doing every term — not just at exam time.",
+      "From the first day, our daughter felt safe and loved. The teachers know her by name and tell us exactly how she is doing every term, not just at exam time.",
     name: "Mrs. Funke A.",
     role: "Parent of a Primary 4 pupil",
   },
   {
     quote:
-      "The school prepared my son brilliantly for his BECE. What surprised me most was his character — he is respectful, honest and hardworking, and that started here.",
+      "The school prepared my son brilliantly for his BECE. What surprised me most was his character. He is respectful, honest and hardworking, and that started here.",
     name: "Alhaji Ibrahim S.",
     role: "Parent of a JSS 3 pupil",
   },
   {
     quote:
-      "We have moved schools three times in four years. This is the first one that feels like family — small classes, caring teachers and a genuinely safe campus.",
+      "We have moved schools three times in four years. This is the first one that feels like family: small classes, caring teachers and a genuinely safe campus.",
     name: "Mr. & Mrs. Okafor",
     role: "Parents of Nursery and Primary pupils",
   },

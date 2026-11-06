@@ -45,7 +45,7 @@ const STEPS: Array<{ icon: LucideIcon; step: string; title: string; text: string
     icon: ClipboardCheck,
     step: "3",
     title: "Assessment & Interview",
-    text: "A short, friendly assessment — play-based for Nursery, written for Primary and Secondary — plus a chat with the child and parents.",
+    text: "A short, friendly assessment: play-based for Nursery, written for Primary and Secondary. Plus a chat with the child and parents.",
   },
   {
     icon: GraduationCap,
@@ -77,7 +77,7 @@ const FAQ = [
   {
     question: "How old should my child be for Nursery 1?",
     answer:
-      "Children should be at least 2 years old by the start of the term (TODO: confirm policy). If you are unsure whether your child is ready, ask us — we will advise you honestly.",
+      "Children should be at least 2 years old by the start of the term (TODO: confirm policy). If you are unsure whether your child is ready, ask us. We will advise you honestly.",
   },
   {
     question: "What happens after I submit the form?",
@@ -87,12 +87,12 @@ const FAQ = [
   {
     question: "Do you offer sibling discounts?",
     answer:
-      "Yes — 10% off for the second child and 15% for a third (TODO: confirm the current discounts). Simply mention it when you apply.",
+      "Yes. 10% off for the second child and 15% for a third (TODO: confirm the current discounts). Simply mention it when you apply.",
   },
   {
     question: "What should my child bring on assessment day?",
     answer:
-      "The previous report card, comfortable clothes for play, and a water bottle. We handle everything else — just come relaxed.",
+      "The previous report card, comfortable clothes for play, and a water bottle. We handle everything else. Just come relaxed.",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function AdmissionsPage() {
       <PageHeader
         crumb="Admissions"
         title="Admissions & Registration"
-        description="Four simple steps stand between you and a place at The Green Peace School. Start with the form — we will walk through every step with you."
+        description="Four simple steps stand between you and a place at The Green Peace School. Start with the form. We will walk through every step with you."
       />
 
       {/* --------------------------------- The form ---------------------------------
@@ -132,65 +132,19 @@ export default function AdmissionsPage() {
         aria-labelledby="inquiry-heading"
         className="py-16 sm:py-24"
       >
-        <Container className="grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:gap-14">
-          <div>
-            <SectionHeading
-              id="inquiry-heading"
-              align="left"
-              eyebrow="Registration & inquiry"
-              title="Take the first step"
-              description="Fill this form and our admissions team will contact you within one to two school days. No commitment — just a conversation."
-            />
-            <h3 className="mt-10 text-sm font-bold uppercase tracking-wider text-text">
-              What happens next
-            </h3>
-            <ul className="mt-4 space-y-4">
-              {[
-                "We call or WhatsApp you to arrange a visit or assessment.",
-                "You receive the outcome within one week — with clear next steps.",
-                "Enrolment takes a quiet afternoon: forms, fees, uniforms, books. Done.",
-              ].map((item, i) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2
-                    className="mt-0.5 h-5 w-5 shrink-0 text-primary"
-                    aria-hidden="true"
-                  />
-                  <span className="leading-relaxed text-text-muted">
-                    <span className="sr-only">Step {i + 1}: </span>
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-10 rounded-2xl border border-line bg-white p-6 shadow-card">
-              <h3 className="font-semibold text-text">Prefer to talk?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-text-muted">
-                Call{" "}
-                <a
-                  href={`tel:${siteConfig.phones[0].number.replace(/\s/g, "")}`}
-                  className="font-semibold text-primary underline"
-                >
-                  {siteConfig.phones[0].number}
-                </a>{" "}
-                or{" "}
-                <a
-                  href={siteConfig.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-primary underline"
-                >
-                  WhatsApp us
-                </a>{" "}
-                — we are happy to answer questions about fees, dates and the
-                admission process.
-              </p>
-            </div>
-          </div>
+        <Container>
+          {/* Centered heading, then the form card, then what happens next */}
+          <SectionHeading
+            id="inquiry-heading"
+            eyebrow="Registration & inquiry"
+            title="Take the first step"
+            description="Fill this form in three quick parts and our admissions team will contact you within one to two school days. No commitment, just a conversation."
+          />
 
           <Reveal>
-            <div className="rounded-3xl border border-line bg-white p-6 shadow-card sm:p-10">
+            <div className="mx-auto mt-12 max-w-3xl rounded-3xl border border-line bg-white p-6 text-center shadow-card sm:p-10">
               <h2 className="font-serif text-2xl text-text">
-                Registration & Inquiry Form
+                Registration &amp; Inquiry Form
               </h2>
               <p className="mt-1 text-sm text-text-muted">
                 Fields marked{" "}
@@ -199,11 +153,60 @@ export default function AdmissionsPage() {
                 </span>{" "}
                 <span className="sr-only">(asterisk) are</span> required.
               </p>
-              <div className="mt-8">
+              <div className="mt-8 text-left">
                 <InquiryForm />
               </div>
             </div>
           </Reveal>
+
+          {/* What happens next: three short, centred reassurances */}
+          <h3 className="mt-14 text-center text-sm font-bold uppercase tracking-wider text-text">
+            What happens next
+          </h3>
+          <div className="mx-auto mt-6 grid max-w-4xl gap-4 sm:grid-cols-3">
+            {[
+              "We call or WhatsApp you to arrange a visit or assessment.",
+              "You receive the outcome within one week, with clear next steps.",
+              "Enrolment takes a quiet afternoon: forms, fees, uniforms, books. Done.",
+            ].map((item, i) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-line bg-white p-5 text-center shadow-card"
+              >
+                <CheckCircle2
+                  className="mx-auto h-6 w-6 text-primary"
+                  aria-hidden="true"
+                />
+                <span className="sr-only">Step {i + 1}:</span>
+                <p className="mt-3 text-sm leading-relaxed text-text-muted">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Prefer to talk? centred card */}
+          <div className="mx-auto mt-8 max-w-xl rounded-2xl border border-line bg-white p-6 text-center shadow-card">
+            <h3 className="font-semibold text-text">Prefer to talk?</h3>
+            <p className="mt-2 text-sm leading-relaxed text-text-muted">
+              Call{" "}
+              <a
+                href={`tel:${siteConfig.phones[0].number.replace(/\s/g, "")}`}
+                className="font-semibold text-primary underline"
+              >
+                {siteConfig.phones[0].number}
+              </a>{" "}
+              or{" "}
+              <a
+                href={siteConfig.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary underline"
+              >
+                WhatsApp us
+              </a>
+              . We are happy to answer questions about fees, dates and the
+              admission process.
+            </p>
+          </div>
         </Container>
       </section>
 
@@ -214,7 +217,7 @@ export default function AdmissionsPage() {
             id="process-heading"
             eyebrow="The process"
             title="How admission works"
-            description="No mystery, no queues — just four clear steps."
+            description="No mystery, no queues, just four clear steps."
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {STEPS.map((step, i) => {
@@ -259,7 +262,7 @@ export default function AdmissionsPage() {
                 Document requirements
               </h2>
               <p className="mt-4 leading-relaxed text-text-muted">
-                Keep these ready when you apply — having them on hand is the
+                Keep these ready when you apply. Having them on hand is the
                 fastest way through the whole process.
               </p>
               <ul className="mt-6 space-y-3">
@@ -273,7 +276,7 @@ export default function AdmissionsPage() {
                 ))}
               </ul>
               <p className="mt-6 rounded-2xl border border-line bg-white p-4 text-sm leading-relaxed text-text-muted">
-                Bring originals and photocopies — we copy on site and return
+                Bring originals and photocopies. We copy on site and return
                 your originals the same day.
               </p>
             </div>
@@ -282,7 +285,7 @@ export default function AdmissionsPage() {
             <div className="rounded-3xl border border-line bg-white p-8 shadow-card sm:p-10">
               <h2 className="font-serif text-2xl text-text">Frequently asked questions</h2>
               <p className="mt-2 text-sm text-text-muted">
-                The questions every parent asks — answered honestly.
+                The questions every parent asks, answered honestly.
               </p>
               <div className="mt-6">
                 <Accordion items={FAQ} />

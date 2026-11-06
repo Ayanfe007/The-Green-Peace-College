@@ -88,8 +88,8 @@ const SECTIONS: Array<{ title: string; body: React.ReactNode }> = [
     title: "5. Intellectual property",
     body: (
       <p>
-        The content of this Website — including text, graphics, logos,
-        icons, images and the overall design — is the property of{" "}
+        The content of this Website (including text, graphics, logos,
+        icons, images and the overall design) is the property of{" "}
         {siteConfig.name} or its licensors, and is protected by
         copyright and other intellectual property laws. You may view and
         print reasonable copies for your personal, non-commercial use,
@@ -175,7 +175,7 @@ export default function TermsPage() {
       <PageHeader
         crumb="Terms"
         title="Terms & Conditions"
-        description="The rules for using this website — admissions, fees, content and liability, in plain language."
+        description="The rules for using this website: admissions, fees, content and liability, in plain language."
       />
       <section className="py-16 sm:py-24">
         <Container className="max-w-3xl">

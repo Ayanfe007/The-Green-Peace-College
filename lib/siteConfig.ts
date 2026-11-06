@@ -16,7 +16,7 @@ export const siteConfig = {
   shortName: "Green Peace School",
   tagline: "Nurturing Minds. Growing Character. Shaping Futures.",
   description:
-    "A warm, values-driven Nursery, Primary and Secondary school in Ifo, Ogun State — raising confident, curious and kind children since 1998.", // TODO: review (founding year)
+    "A warm, values-driven Nursery, Primary and Secondary school in Ifo, Ogun State. Raising confident, curious and kind children since 1998.", // TODO: review (founding year)
   url: "https://www.thegreenpeaceschool.ng", // TODO: replace with the live domain
   foundedYear: 1998, // TODO: replace
 

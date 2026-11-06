@@ -24,7 +24,7 @@ import { siteConfig } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "The story, vision, values and people behind The Green Peace School — from our founding in 1998 to today.",
+    "The story, vision, values and people behind The Green Peace School, from our founding in 1998 to today.",
   alternates: { canonical: canonicalUrl("/about") },
 };
 
@@ -83,7 +83,7 @@ const TEAM: Array<{ initials: string; name: string; role: string; line: string }
     initials: "EO",
     name: "Mr. Emmanuel Osei", // TODO: replace
     role: "Bursar",
-    line: "Keeps the school running smoothly — fee statements included.",
+    line: "Keeps the school running smoothly, fee statements included.",
   },
 ];
 
@@ -204,7 +204,7 @@ export default function AboutPage() {
               <p className="mt-3 leading-relaxed text-text-muted">
                 The classrooms have grown; the idea has not. We still greet
                 every child at the gate, we still keep our classes small,
-                and we still tell parents the honest truth — kindly, and on
+                and we still tell parents the honest truth, kindly and on
                 time.
               </p>
             </div>
@@ -232,7 +232,7 @@ export default function AboutPage() {
                 <h3 className="mt-5 text-lg font-semibold text-text">Our Vision</h3>
                 <p className="mt-2 leading-relaxed text-text-muted">
                   To be the most trusted Nursery, Primary and Secondary
-                  school in {siteConfig.address.region} — known not only for
+                  school in {siteConfig.address.region}, known not only for
                   excellent results, but for raising kind, confident and
                   responsible citizens.
                 </p>
@@ -246,8 +246,8 @@ export default function AboutPage() {
                 <h3 className="mt-5 text-lg font-semibold text-text">Our Mission</h3>
                 <p className="mt-2 leading-relaxed text-text-muted">
                   To provide a safe, warm and stimulating environment where
-                  every child can learn, grow and thrive — academically,
-                  morally and socially — in partnership with caring
+                  every child can learn, grow and thrive, academically,
+                  morally and socially, in partnership with caring
                   parents.
                 </p>
               </Card>
@@ -299,9 +299,9 @@ export default function AboutPage() {
               signature="Adunni Okafor" // TODO: replace
               headingId="proprietor-heading"
               paragraphs={[
-                `When we opened ${siteConfig.name} in ${siteConfig.foundedYear}, our dream was simple: a place where children are known, loved and encouraged to be their very best. We had twenty-four pupils, two modest classrooms, and one unshakeable belief — that every child, in every family, deserves a school that treats them as a gift.`,
-                "Twenty-eight years later, that belief is the school. It is why our teachers greet every child at the gate, why we keep our classes small, and why we speak to parents honestly about how their child is doing — not just at exam time, but every term. Many of our first pupils are now at university, and watching them grow into confident young adults is the proudest part of my life.",
-                "To the families considering a place with us: we would be honoured to welcome you. Come and visit — walk the campus, meet the teachers, and watch the children. Then decide if this feels like home. We think it will.",
+                `When we opened ${siteConfig.name} in ${siteConfig.foundedYear}, our dream was simple: a place where children are known, loved and encouraged to be their very best. We had twenty-four pupils, two modest classrooms, and one unshakeable belief: that every child, in every family, deserves a school that treats them as a gift.`,
+                "Twenty-eight years later, that belief is the school. It is why our teachers greet every child at the gate, why we keep our classes small, and why we speak to parents honestly about how their child is doing, not just at exam time, but every term. Many of our first pupils are now at university, and watching them grow into confident young adults is the proudest part of my life.",
+                "To the families considering a place with us: we would be honoured to welcome you. Come and visit. Walk the campus, meet the teachers, and watch the children. Then decide if this feels like home. We think it will.",
               ]}
             />
           </div>
@@ -322,9 +322,9 @@ export default function AboutPage() {
               signature="Chinedu Eze" // TODO: replace
               headingId="principal-heading"
               paragraphs={[
-                "Good morning, and welcome. At The Green Peace School our classrooms are alive — children reading aloud, asking “why”, building, singing and solving problems together. That energy is not an accident. It comes from a teaching method that respects how children actually learn: by doing, by playing, and by being challenged kindly.",
-                "In Nursery we follow each child's developmental milestones through purposeful play. In Primary we build unshakable foundations in literacy and numeracy, with continuous, low-pressure assessment — so no child is ever surprised by a report card. In Secondary we prepare our students thoroughly for BECE, WAEC and NECO, while our career guidance office helps them see what lies beyond the classroom.",
-                "Our results are good, but I would rather be remembered for the kind of person our students become. Come and see us — you will meet a team of educators who love exactly what they do.",
+                "Good morning, and welcome. At The Green Peace School our classrooms are alive: children reading aloud, asking “why”, building, singing and solving problems together. That energy is not an accident. It comes from a teaching method that respects how children actually learn: by doing, by playing, and by being challenged kindly.",
+                "In Nursery we follow each child's developmental milestones through purposeful play. In Primary we build unshakable foundations in literacy and numeracy, with continuous, low-pressure assessment, so no child is ever surprised by a report card. In Secondary we prepare our students thoroughly for BECE, WAEC and NECO, while our career guidance office helps them see what lies beyond the classroom.",
+                "Our results are good, but I would rather be remembered for the kind of person our students become. Come and see us. You will meet a team of educators who love exactly what they do.",
               ]}
             />
           </div>

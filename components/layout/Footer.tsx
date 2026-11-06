@@ -44,7 +44,7 @@ export function Footer() {
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
         <div>
-          <Link href="/" aria-label="The Green Peace School — back to home" className="inline-block rounded-lg">
+          <Link href="/" aria-label="The Green Peace School. Back to home" className="inline-block rounded-lg">
             <Logo src={footerLogo?.src ?? null} />
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-200">
@@ -52,7 +52,7 @@ export function Footer() {
             {siteConfig.address.city}.
           </p>
           <p className="mt-2 text-xs italic text-primary-300">
-            “Knowledge, Development &amp; Prosperity” — our motto.
+            “Knowledge, Development &amp; Prosperity” is our motto.
           </p>
           <ul className="mt-5 flex gap-3" aria-label="Social media">
             {SOCIALS.map(({ label, href, Icon }) => (

@@ -52,7 +52,7 @@ export function Navbar({ logoSrc }: { logoSrc?: string | null }) {
       <Container className="flex h-16 items-center justify-between gap-4 md:h-20">
         <Link
           href="/"
-          aria-label="The Green Peace School — back to home"
+          aria-label="The Green Peace School. Back to home"
           className="rounded-lg"
         >
           <Logo src={logoSrc} />

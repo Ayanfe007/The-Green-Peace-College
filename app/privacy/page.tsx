@@ -93,7 +93,7 @@ const SECTIONS: Array<{ title: string; body: React.ReactNode }> = [
       <p>
         This website does not set its own tracking or advertising
         cookies. The Google Map shown on the Contact page may set
-        cookies when it loads — see our{" "}
+        cookies when it loads. See our{" "}
         <Link href="/cookies" className="font-semibold text-primary underline">
           Cookie Policy
         </Link>{" "}
@@ -170,8 +170,8 @@ const SECTIONS: Array<{ title: string; body: React.ReactNode }> = [
           To exercise any of these rights, email{" "}
           <a href={`mailto:${siteConfig.email}`} className="font-semibold text-primary underline">
             {siteConfig.email}
-          </a>{" "}
-          — there is no fee, and we respond within 30 days. You also have
+          </a>.{" "}
+          There is no fee, and we respond within 30 days. You also have
           the right to lodge a complaint with the Nigeria Data Protection
           Commission (NDPC).
         </p>

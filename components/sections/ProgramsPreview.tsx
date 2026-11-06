@@ -43,7 +43,7 @@ export function ProgramsPreview() {
           id="programs-heading"
           eyebrow="Our programmes"
           title="From first steps to first degrees"
-          description="One continuous journey from Nursery to Secondary — same values, same community, steadily bigger challenges."
+          description="One continuous journey from Nursery to Secondary: same values, same community, steadily bigger challenges."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {PROGRAMS.map((program, i) => (
