@@ -20,8 +20,15 @@ export const images = {
   aboutStory: "/images/about-story.jpg",
   /** Proprietor portrait — 900×1125 (4:5) or square. */
   proprietor: "/images/proprietor.jpg",
-  /** Headmistress portrait — 900×1125 (4:5) or square. */
+  /** Principal portrait — 900×1125 (4:5) or square. */
   principal: "/images/principal.jpg",
+  /** Headmistress portrait — 900×1125 (4:5) or square. */
+  headmistress: "/images/headmistress.jpg",
+  /** About page: leadership team card portraits (square 800×800). */
+  team: {
+    technicalDirector: "/images/team-technical-director.jpg",
+    pro: "/images/team-pro.jpg",
+  },
   /** Academics: Nursery card — 1000×750 (4:3). */
   nursery: "/images/nursery.jpg",
   /** Academics: Primary card — 1000×750 (4:3). */

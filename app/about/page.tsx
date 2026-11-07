@@ -28,9 +28,10 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl("/about") },
 };
 
-/* Founder and Headmistress names, messages and portraits are the real ones.
-   Portraits live in /public/images (proprietor.jpg, principal.jpg,
-   4:5 or square). Team names below are placeholders (TODO markers). */
+/* Founder and Principal names, messages and portraits are the real ones.
+   The Headmistress message and the two team cards are still
+   placeholders (TODO markers) waiting for the real names and photos.
+   Portraits live in /public/images (4:5 or square). */
 
 const VALUES: Array<{ icon: LucideIcon; name: string; text: string }> = [
   {
@@ -60,20 +61,22 @@ const VALUES: Array<{ icon: LucideIcon; name: string; text: string }> = [
   },
 ];
 
-/* The school's leadership team. The Headmistress has her own message
-   section above, so she is not repeated here as a card. */
-const TEAM: Array<{ initials: string; name: string; role: string; line: string }> = [
+/* The school's leadership team (photo cards). Names and portraits are
+   placeholders until the real ones are supplied (TODO markers). */
+const TEAM: Array<{ name: string; role: string; line: string; image: string; alt: string }> = [
   {
-    initials: "DA",
     name: "Mr. Dayo Adeleke", // TODO: replace
     role: "Technical Director",
     line: "Keeps the school's technology and learning systems ahead of the classroom.",
+    image: images.team.technicalDirector,
+    alt: "Portrait of the school's technical director",
   },
   {
-    initials: "KP",
     name: "Mrs. Kemi Peters", // TODO: replace
     role: "Public Relations Officer",
     line: "The friendly voice that keeps the school and its families connected.",
+    image: images.team.pro,
+    alt: "Portrait of the school's public relations officer",
   },
 ];
 
@@ -303,23 +306,45 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* ---------------------- Message from the Headmistress ---------------------- */}
+      {/* ----------------------- Message from the Principal ----------------------- */}
       <section aria-labelledby="principal-heading" className="bg-background-dark py-16 sm:py-24">
         <Container>
           <div className="mx-auto max-w-5xl">
             <PersonMessage
               reverse
               image={images.principal}
-              alt="Portrait of Adebayo Fateemah Adeshola, Headmistress of The Green Peace School"
-              eyebrow="A message from our Headmistress"
+              alt="Portrait of Adebayo Fateemah Adeshola, Principal of The Green Peace School"
+              eyebrow="A message from our Principal"
               name="Adebayo Fateemah Adeshola"
-              role="Headmistress"
+              role="Principal"
               signature="Adebayo Fateemah Adeshola"
               headingId="principal-heading"
               paragraphs={[
                 "Good morning, and welcome. At The Green Peace School our classrooms are alive: children reading aloud, asking “why”, building, singing and solving problems together. That energy is not an accident. It comes from a teaching method that respects how children actually learn: by doing, by playing, and by being challenged kindly.",
                 "In Nursery we follow each child's developmental milestones through purposeful play. In Primary we build unshakable foundations in literacy and numeracy, with continuous, low-pressure assessment, so no child is ever surprised by a report card. In Secondary we prepare our students thoroughly for BECE, WAEC and NECO, while our career guidance office helps them see what lies beyond the classroom.",
                 "Our results are good, but I would rather be remembered for the kind of person our students become. Come and see us. You will meet a team of educators who love exactly what they do.",
+              ]}
+            />
+          </div>
+        </Container>
+      </section>
+
+      {/* --------------------- Message from the Headmistress --------------------- */}
+      <section aria-labelledby="headmistress-heading" className="py-16 sm:py-24">
+        <Container>
+          <div className="mx-auto max-w-5xl">
+            <PersonMessage
+              image={images.headmistress}
+              alt="Portrait of the school's headmistress"
+              eyebrow="A message from our Headmistress"
+              name="Mrs. Amina Yusuf" // TODO: replace
+              role="Headmistress"
+              signature="Amina Yusuf" // TODO: replace
+              headingId="headmistress-heading"
+              paragraphs={[
+                "Walking through our gates each morning, the first sound you will hear is the one we are proudest of: children being greeted by name. That is the heart of this school. Before lessons begin, every child is known, welcomed and settled.",
+                "My role is to keep the day to day running with care. Timetables, classrooms, meals, transport, parent meetings. Nothing small, and nothing overlooked. I listen to every parent who walks in, because a parent's concern is a priority the moment it is shared.",
+                "The children teach me as much as I teach them. They are curious, generous and full of questions, and they remind me every single day why we do this work. When your child joins our family, they become part of ours too.",
               ]}
             />
           </div>
@@ -337,15 +362,16 @@ export default function AboutPage() {
           />
           <div className="mx-auto mt-12 grid max-w-3xl gap-5 sm:grid-cols-2">
             {TEAM.map((member, i) => (
-              <Reveal key={member.name} delay={i * 60} className="h-full">
-                <Card className="h-full text-center">
-                  {/* Placeholder avatar — swap for photos when supplied. */}
-                  <span
-                    aria-hidden="true"
-                    className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-primary-100 font-serif text-2xl text-primary-700"
-                  >
-                    {member.initials}
-                  </span>
+              <Reveal key={member.role} delay={i * 60} className="h-full">
+                <Card className="h-full text-center" hover={false}>
+                  <Image
+                    src={member.image}
+                    alt={member.alt}
+                    width={800}
+                    height={800}
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                    className="aspect-square w-full rounded-xl object-cover"
+                  />
                   <h3 className="mt-4 font-semibold text-text">{member.name}</h3>
                   <p className="mt-0.5 text-xs font-semibold uppercase tracking-wider text-primary">
                     {member.role}
