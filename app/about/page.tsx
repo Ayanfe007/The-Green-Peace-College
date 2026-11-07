@@ -85,6 +85,18 @@ const TEAM: Array<{ initials: string; name: string; role: string; line: string }
     role: "Bursar",
     line: "Keeps the school running smoothly, fee statements included.",
   },
+  {
+    initials: "DA",
+    name: "Mr. Dayo Adeleke", // TODO: replace
+    role: "Technical Director",
+    line: "Keeps the school's technology and learning systems ahead of the classroom.",
+  },
+  {
+    initials: "KP",
+    name: "Mrs. Kemi Peters", // TODO: replace
+    role: "Public Relations Officer",
+    line: "The friendly voice that keeps the school and its families connected.",
+  },
 ];
 
 /** Alternating left/right person message block (stacks on mobile). */
@@ -340,7 +352,7 @@ export default function AboutPage() {
             title="Meet our team"
             description="A small slice of the people who make the school feel like family."
           />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {TEAM.map((member, i) => (
               <Reveal key={member.name} delay={i * 60} className="h-full">
                 <Card className="h-full text-center">
