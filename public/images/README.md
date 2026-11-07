@@ -21,7 +21,7 @@ itself (no code changes needed).
 | `hero.jpg` 📷 | Home — hero background | 1920×1080 (landscape) | The classroom wing + open yard; a green overlay sits on top |
 | `welcome.jpg` 📷 | Home — welcome section | 1200×900 (4:3) | The main building with the mission & vision boards |
 | `about-story.jpg` 📷 | About — “Our Story” | 1200×800 (3:2) | The colourful classroom courtyard |
-| `proprietor.jpg` 🖼️ | About — Proprietress message | 900×1125 (4:5) or square | **Placeholder** — portrait, shoulders-up |
+| `proprietor.jpg` 📷 | About — Founder's message | 900×1125 (4:5) or square | Real portrait: Mr. Abatti Olalekan Ahmed, Founder |
 | `principal.jpg` 🖼️ | About — Principal message | 900×1125 (4:5) or square | **Placeholder** — portrait, shoulders-up |
 | `nursery.jpg` 📷 | Academics — Nursery card | 1000×750 (4:3) | The colourful colonnade beside the play yard |
 | `primary.jpg` 📷 | Academics — Primary card | 1000×750 (4:3) | The classroom wing and open yard |

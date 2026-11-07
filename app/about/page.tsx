@@ -24,13 +24,14 @@ import { siteConfig } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "The story, vision, values and people behind The Green Peace School, from our founding in 1998 to today.",
+    "The story, vision, values and people behind The Green Peace School, from our founding in 2010 to today.",
   alternates: { canonical: canonicalUrl("/about") },
 };
 
-/* TODO: replace the names, titles and messages below with the real
-   proprietor/principal details. Portraits: /public/images/proprietor.jpg
-   and /public/images/principal.jpg (4:5 or square). */
+/* The Founder's name, message and portrait are the real ones.
+   TODO: replace the principal's name, message and portrait.
+   Portraits live in /public/images (proprietor.jpg, principal.jpg,
+   4:5 or square). Team names below are placeholders (TODO markers). */
 
 const VALUES: Array<{ icon: LucideIcon; name: string; text: string }> = [
   {
@@ -194,30 +195,33 @@ export default function AboutPage() {
                 id="story-heading"
                 className="mt-2 font-serif text-3xl leading-tight text-text sm:text-4xl"
               >
-                It began with twenty-four pupils and a big idea.
+                It began in 2010 with a vision, not just a building.
               </h2>
-              {/* TODO: replace with the school's real history. */}
               <p className="mt-4 leading-relaxed text-text-muted">
-                {siteConfig.name} was founded in {siteConfig.foundedYear} with
-                twenty-four pupils and a modest two-room building on{" "}
-                {siteConfig.address.street}. The idea was simple: a school
-                where children are known by name, where teachers stay to
-                learn as well as teach, and where character is treated as
-                seriously as any subject.
+                In {siteConfig.foundedYear}, {siteConfig.name} was born, not
+                just as a building, but as a vision: a standard where every
+                child gets the best of education.
               </p>
               <p className="mt-3 leading-relaxed text-text-muted">
-                Word travelled quickly. Families who loved the calm, honest
-                classroom brought their siblings; those brought their
-                friends. By the first decade we had grown to a full primary
-                wing, and today more than {siteConfig.stats.students} pupils
-                from Nursery to SS 3 learn across three wings of a green,
-                fenced campus in {siteConfig.address.city}.
+                The name carries its promise. Green means life, growth and a
+                brighter future. Peace is the belief that a child learns
+                best in an environment of natural peace, love and calm. From
+                the very beginning, the mission was clear: every child
+                deserves quality, every child deserves to be seen, and every
+                child deserves a chance to shine.
               </p>
               <p className="mt-3 leading-relaxed text-text-muted">
-                The classrooms have grown; the idea has not. We still greet
-                every child at the gate, we still keep our classes small,
-                and we still tell parents the honest truth, kindly and on
-                time.
+                The journey was not easy. The school went through difficult
+                times, when the road was rough and the future looked
+                uncertain, but it never gave up. It kept praying, kept
+                working, and kept believing in the children God gave it.
+              </p>
+              <p className="mt-3 leading-relaxed text-text-muted">
+                Today the school is fully approved by the Government and
+                approved for WAEC and NECO examinations. Its students write
+                their exams with confidence in a school that started with
+                just a dream. It has grown, it has become stronger, and it
+                is still growing.
               </p>
             </div>
           </Reveal>
@@ -304,16 +308,18 @@ export default function AboutPage() {
           <div className="mx-auto max-w-5xl">
             <PersonMessage
               image={images.proprietor}
-              alt="Portrait of the school's proprietor"
-              eyebrow="A message from our Proprietress"
-              name="Mrs. Adunni Okafor" // TODO: replace
-              role="Proprietress"
-              signature="Adunni Okafor" // TODO: replace
+              alt="Portrait of Mr. Abatti Olalekan Ahmed, Founder of The Green Peace School"
+              eyebrow="A message from our Founder"
+              name="Mr. Abatti Olalekan Ahmed"
+              role="Founder & Proprietor"
+              signature="Mr. Abatti Olalekan Ahmed"
               headingId="proprietor-heading"
               paragraphs={[
-                `When we opened ${siteConfig.name} in ${siteConfig.foundedYear}, our dream was simple: a place where children are known, loved and encouraged to be their very best. We had twenty-four pupils, two modest classrooms, and one unshakeable belief: that every child, in every family, deserves a school that treats them as a gift.`,
-                "Twenty-eight years later, that belief is the school. It is why our teachers greet every child at the gate, why we keep our classes small, and why we speak to parents honestly about how their child is doing, not just at exam time, but every term. Many of our first pupils are now at university, and watching them grow into confident young adults is the proudest part of my life.",
-                "To the families considering a place with us: we would be honoured to welcome you. Come and visit. Walk the campus, meet the teachers, and watch the children. Then decide if this feels like home. We think it will.",
+                "In 2010, The Green Peace School was born, not just as a building, but as a vision: a standard where every child gets the best of education. We chose the name GREEN because green means life, growth and a brighter future. We chose PEACE because we believe a child learns best in an environment of natural peace, love and calm.",
+                "From the very beginning, our mission was clear. Every child deserves quality. Every child deserves to be seen. Every child deserves a chance to shine. The journey was not easy. We went through difficult times, when it was hard to keep going, when the road was rough and the future looked uncertain. But we did not give up. We kept praying, we kept working, and we kept believing in the children God gave us.",
+                "And today, we can only lift our hands and say: thank God for His mercy. From that small beginning in 2010, the school is now fully approved by the Government and approved for WAEC and NECO examinations. Our students write their exams with confidence in a school that started with just a dream.",
+                "To every parent who trusted us from the beginning, to every teacher who stood with us through the storms, and to every student who is part of this family, thank you. This testimony belongs to all of us.",
+                "The Green Peace School is not just a school. It is a place where green stands for a brighter future, and peace stands for natural peace and growth. We started with faith. We survived by grace. And by God's mercy, the best is yet to come.",
               ]}
             />
           </div>
