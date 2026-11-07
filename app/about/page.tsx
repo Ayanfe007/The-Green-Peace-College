@@ -28,8 +28,7 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl("/about") },
 };
 
-/* The Founder's name, message and portrait are the real ones.
-   TODO: replace the principal's name, message and portrait.
+/* Founder and Principal names, messages and portraits are the real ones.
    Portraits live in /public/images (proprietor.jpg, principal.jpg,
    4:5 or square). Team names below are placeholders (TODO markers). */
 
@@ -333,11 +332,11 @@ export default function AboutPage() {
             <PersonMessage
               reverse
               image={images.principal}
-              alt="Portrait of the school's principal"
+              alt="Portrait of Adebayo Fateemah Adeshola, Principal of The Green Peace School"
               eyebrow="A message from our Principal"
-              name="Mr. Chinedu Eze" // TODO: replace
+              name="Adebayo Fateemah Adeshola"
               role="Principal"
-              signature="Chinedu Eze" // TODO: replace
+              signature="Adebayo Fateemah Adeshola"
               headingId="principal-heading"
               paragraphs={[
                 "Good morning, and welcome. At The Green Peace School our classrooms are alive: children reading aloud, asking “why”, building, singing and solving problems together. That energy is not an accident. It comes from a teaching method that respects how children actually learn: by doing, by playing, and by being challenged kindly.",
