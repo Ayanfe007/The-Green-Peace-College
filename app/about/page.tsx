@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl("/about") },
 };
 
-/* Founder and Principal names, messages and portraits are the real ones.
+/* Founder and Headmistress names, messages and portraits are the real ones.
    Portraits live in /public/images (proprietor.jpg, principal.jpg,
    4:5 or square). Team names below are placeholders (TODO markers). */
 
@@ -60,31 +60,9 @@ const VALUES: Array<{ icon: LucideIcon; name: string; text: string }> = [
   },
 ];
 
+/* The school's leadership team. The Headmistress has her own message
+   section above, so she is not repeated here as a card. */
 const TEAM: Array<{ initials: string; name: string; role: string; line: string }> = [
-  {
-    initials: "BA",
-    name: "Mrs. Bisi Adeyemi", // TODO: replace
-    role: "Nursery Head",
-    line: "Twelve years shaping little minds through play.",
-  },
-  {
-    initials: "TB",
-    name: "Mr. Tunde Bakare", // TODO: replace
-    role: "Primary Head",
-    line: "Believes a strong reading habit changes a life.",
-  },
-  {
-    initials: "NO",
-    name: "Mrs. Ngozi Obi", // TODO: replace
-    role: "Secondary Head",
-    line: "Former chemistry teacher and WAEC-results whisperer.",
-  },
-  {
-    initials: "EO",
-    name: "Mr. Emmanuel Osei", // TODO: replace
-    role: "Bursar",
-    line: "Keeps the school running smoothly, fee statements included.",
-  },
   {
     initials: "DA",
     name: "Mr. Dayo Adeleke", // TODO: replace
@@ -325,17 +303,17 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* ----------------------- Message from the Principal ----------------------- */}
+      {/* ---------------------- Message from the Headmistress ---------------------- */}
       <section aria-labelledby="principal-heading" className="bg-background-dark py-16 sm:py-24">
         <Container>
           <div className="mx-auto max-w-5xl">
             <PersonMessage
               reverse
               image={images.principal}
-              alt="Portrait of Adebayo Fateemah Adeshola, Principal of The Green Peace School"
-              eyebrow="A message from our Principal"
+              alt="Portrait of Adebayo Fateemah Adeshola, Headmistress of The Green Peace School"
+              eyebrow="A message from our Headmistress"
               name="Adebayo Fateemah Adeshola"
-              role="Principal"
+              role="Headmistress"
               signature="Adebayo Fateemah Adeshola"
               headingId="principal-heading"
               paragraphs={[
@@ -355,9 +333,9 @@ export default function AboutPage() {
             id="team-heading"
             eyebrow="The people"
             title="Meet our team"
-            description="A small slice of the people who make the school feel like family."
+            description="The leadership behind the school."
           />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-3xl gap-5 sm:grid-cols-2">
             {TEAM.map((member, i) => (
               <Reveal key={member.name} delay={i * 60} className="h-full">
                 <Card className="h-full text-center">

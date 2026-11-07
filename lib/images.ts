@@ -20,7 +20,7 @@ export const images = {
   aboutStory: "/images/about-story.jpg",
   /** Proprietor portrait — 900×1125 (4:5) or square. */
   proprietor: "/images/proprietor.jpg",
-  /** Principal portrait — 900×1125 (4:5) or square. */
+  /** Headmistress portrait — 900×1125 (4:5) or square. */
   principal: "/images/principal.jpg",
   /** Academics: Nursery card — 1000×750 (4:3). */
   nursery: "/images/nursery.jpg",
