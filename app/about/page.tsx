@@ -28,10 +28,10 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl("/about") },
 };
 
-/* Founder, Principal, Technical Director and PRO details are the real
-   ones. Only the Headmistress message is still a placeholder (TODO
-   markers) waiting for the real name and photo.
-   Portraits live in /public/images (4:5 or square). */
+/* All leadership details (Founder, Principal, Headmistress, Technical
+   Director, PRO) are the real ones. Portraits live in /public/images
+   (4:5 or square). The Headmistress message text is a warm generic
+   welcome; replace with her own words when supplied. */
 
 const VALUES: Array<{ icon: LucideIcon; name: string; text: string }> = [
   {
@@ -335,11 +335,11 @@ export default function AboutPage() {
           <div className="mx-auto max-w-5xl">
             <PersonMessage
               image={images.headmistress}
-              alt="Portrait of the school's headmistress"
+              alt="Portrait of Princess Oluwasijibomi Gbadebo, Headmistress of The Green Peace School"
               eyebrow="A message from our Headmistress"
-              name="Mrs. Amina Yusuf" // TODO: replace
+              name="Princess Oluwasijibomi Gbadebo"
               role="Headmistress"
-              signature="Amina Yusuf" // TODO: replace
+              signature="Princess Oluwasijibomi Gbadebo"
               headingId="headmistress-heading"
               paragraphs={[
                 "Walking through our gates each morning, the first sound you will hear is the one we are proudest of: children being greeted by name. That is the heart of this school. Before lessons begin, every child is known, welcomed and settled.",

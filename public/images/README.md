@@ -23,7 +23,7 @@ itself (no code changes needed).
 | `about-story.jpg` 📷 | About — “Our Story” | 1200×800 (3:2) | The colourful classroom courtyard |
 | `proprietor.jpg` 📷 | About — Founder's message | 900×1125 (4:5) or square | Real portrait: Mr. Abatti Olalekan Ahmed, Founder |
 | `principal.jpg` 📷 | About — Principal's message | 900×1125 (4:5) or square | Real portrait: Adebayo Fateemah Adeshola, Principal |
-| `headmistress.jpg` 🖼️ | About — Headmistress's message | 900×1125 (4:5) or square | **Placeholder** — awaiting the real portrait |
+| `headmistress.jpg` 📷 | About — Headmistress's message | 900×1125 (4:5) or square | Real portrait: Princess Oluwasijibomi Gbadebo, Headmistress |
 | `team-technical-director.jpg` 📷 | About — team card | 800×800 (square) | Real portrait: Mr. Oyewole John Oyewunmi, Technical Director |
 | `team-pro.jpg` 📷 | About — team card | 800×800 (square) | Real portrait: Johnson Adesewa Motunrayo, PRO (small source; a full-size original would sharpen it) |
 | `nursery.jpg` 📷 | Academics — Nursery card | 1000×750 (4:3) | The colourful colonnade beside the play yard |
