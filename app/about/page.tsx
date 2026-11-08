@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   alternates: { canonical: canonicalUrl("/about") },
 };
 
-/* Founder, Principal and Technical Director details are the real ones.
-   The Headmistress message and the PRO card are still placeholders
-   (TODO markers) waiting for the real name and photo.
+/* Founder, Principal, Technical Director and PRO details are the real
+   ones. Only the Headmistress message is still a placeholder (TODO
+   markers) waiting for the real name and photo.
    Portraits live in /public/images (4:5 or square). */
 
 const VALUES: Array<{ icon: LucideIcon; name: string; text: string }> = [
@@ -72,11 +72,11 @@ const TEAM: Array<{ name: string; role: string; line: string; image: string; alt
     alt: "Portrait of Mr. Oyewole John Oyewunmi, Technical Director",
   },
   {
-    name: "Mrs. Kemi Peters", // TODO: replace
+    name: "Johnson Adesewa Motunrayo",
     role: "Public Relations Officer",
     line: "The friendly voice that keeps the school and its families connected.",
     image: images.team.pro,
-    alt: "Portrait of the school's public relations officer",
+    alt: "Portrait of Johnson Adesewa Motunrayo, Public Relations Officer",
   },
 ];
 

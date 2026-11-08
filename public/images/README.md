@@ -25,7 +25,7 @@ itself (no code changes needed).
 | `principal.jpg` 📷 | About — Principal's message | 900×1125 (4:5) or square | Real portrait: Adebayo Fateemah Adeshola, Principal |
 | `headmistress.jpg` 🖼️ | About — Headmistress's message | 900×1125 (4:5) or square | **Placeholder** — awaiting the real portrait |
 | `team-technical-director.jpg` 📷 | About — team card | 800×800 (square) | Real portrait: Mr. Oyewole John Oyewunmi, Technical Director |
-| `team-pro.jpg` 🖼️ | About — team card | 800×800 (square) | **Placeholder** — awaiting the real portrait |
+| `team-pro.jpg` 📷 | About — team card | 800×800 (square) | Real portrait: Johnson Adesewa Motunrayo, PRO (small source; a full-size original would sharpen it) |
 | `nursery.jpg` 📷 | Academics — Nursery card | 1000×750 (4:3) | The colourful colonnade beside the play yard |
 | `primary.jpg` 📷 | Academics — Primary card | 1000×750 (4:3) | The classroom wing and open yard |
 | `secondary.jpg` 📷 | Academics — Secondary card | 1000×750 (4:3) | The main building |
