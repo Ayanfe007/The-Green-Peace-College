@@ -9,7 +9,7 @@
  * find them quickly with a search for "TODO".
  */
 
-const whatsappNumber = "+234 803 123 4567"; // TODO: replace
+const whatsappNumber = "+234 805 652 7803";
 
 export const siteConfig = {
   name: "The Green Peace School",
@@ -28,10 +28,8 @@ export const siteConfig = {
     country: "Nigeria",
   },
 
-  phones: [
-    { label: "Office (daytime)", number: "+234 803 123 4567" }, // TODO: replace
-    { label: "Office (after 4pm)", number: "+234 902 345 6789" }, // TODO: replace
-  ],
+  // TODO: add a second number here when the school has one.
+  phones: [{ label: "Call or WhatsApp", number: "+234 805 652 7803" }],
 
   email: "hello@thegreenpeaceschool.ng", // TODO: replace
   admissionsEmail: "admissions@thegreenpeaceschool.ng", // TODO: replace

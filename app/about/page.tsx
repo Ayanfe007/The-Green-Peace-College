@@ -106,18 +106,14 @@ function PersonMessage({
   return (
     <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <Reveal className={reverse ? "lg:order-2" : undefined}>
-        <div className="relative mx-auto w-full max-w-md">
+        <div className="mx-auto w-full max-w-md overflow-hidden rounded-3xl shadow-lift">
           <Image
             src={image}
             alt={alt}
             width={900}
             height={1125}
             sizes="(min-width: 1024px) 40vw, (min-width: 640px) 80vw, 100vw"
-            className="aspect-[4/5] w-full rounded-3xl object-cover shadow-lift"
-          />
-          <span
-            aria-hidden="true"
-            className="absolute -bottom-3 -left-3 -z-10 h-full w-full rounded-3xl border-2 border-accent/60"
+            className="aspect-[4/5] w-full object-cover"
           />
         </div>
       </Reveal>
@@ -295,11 +291,10 @@ export default function AboutPage() {
               signature="Mr. Abatti Olalekan Ahmed"
               headingId="proprietor-heading"
               paragraphs={[
-                "In 2010, The Green Peace School was born, not just as a building, but as a vision: a standard where every child gets the best of education. We chose the name GREEN because green means life, growth and a brighter future. We chose PEACE because we believe a child learns best in an environment of natural peace, love and calm.",
-                "From the very beginning, our mission was clear. Every child deserves quality. Every child deserves to be seen. Every child deserves a chance to shine. The journey was not easy. We went through difficult times, when it was hard to keep going, when the road was rough and the future looked uncertain. But we did not give up. We kept praying, we kept working, and we kept believing in the children God gave us.",
-                "And today, we can only lift our hands and say: thank God for His mercy. From that small beginning in 2010, the school is now fully approved by the Government and approved for WAEC and NECO examinations. Our students write their exams with confidence in a school that started with just a dream.",
-                "To every parent who trusted us from the beginning, to every teacher who stood with us through the storms, and to every student who is part of this family, thank you. This testimony belongs to all of us.",
-                "The Green Peace School is not just a school. It is a place where green stands for a brighter future, and peace stands for natural peace and growth. We started with faith. We survived by grace. And by God's mercy, the best is yet to come.",
+                "Before I was a school founder, I was a student at the Federal University of Agriculture, Abeokuta (FUNAAB), where I studied Animal Production. Farming teaches one thing above all: growth cannot be rushed. You prepare the ground, you plant with care, you guard what is growing, and in time it fruits. I came to believe that children work the same way.",
+                "So when I set out to build a school, I did not build it for chalkboard numbers. I built it for the kind of person that walks out of it. I wanted a place where a child sits up tall, where the teachers actually know the child, and where a parent can ask a straight question and get a straight answer.",
+                "I am on the ground in this school more than most proprietors are. If you walk through our gate, you will probably meet me before you reach my office. That is exactly how I like it.",
+                "To every parent reading this: when you entrust your child to us, you are not simply enrolling a pupil. You are sharing a gift with us. We will guard it, we will grow it, and one day you will look at who your child has become and see that we were part of it.",
               ]}
             />
           </div>
@@ -363,15 +358,17 @@ export default function AboutPage() {
           <div className="mx-auto mt-12 grid max-w-3xl gap-5 sm:grid-cols-2">
             {TEAM.map((member, i) => (
               <Reveal key={member.role} delay={i * 60} className="h-full">
-                <Card className="h-full text-center" hover={false}>
-                  <Image
-                    src={member.image}
-                    alt={member.alt}
-                    width={800}
-                    height={800}
-                    sizes="(min-width: 640px) 50vw, 100vw"
-                    className="aspect-square w-full rounded-xl object-cover"
-                  />
+                <Card className="h-full overflow-hidden text-center" hover={false}>
+                  <div className="overflow-hidden rounded-xl">
+                    <Image
+                      src={member.image}
+                      alt={member.alt}
+                      width={800}
+                      height={800}
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                      className="aspect-square w-full object-cover"
+                    />
+                  </div>
                   <h3 className="mt-4 font-semibold text-text">{member.name}</h3>
                   <p className="mt-0.5 text-xs font-semibold uppercase tracking-wider text-primary">
                     {member.role}
