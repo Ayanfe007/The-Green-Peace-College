@@ -315,9 +315,9 @@ export default function AboutPage() {
               signature="Adebayo Fateemah Adeshola"
               headingId="principal-heading"
               paragraphs={[
-                "Good morning, and welcome. At The Green Peace School our classrooms are alive: children reading aloud, asking “why”, building, singing and solving problems together. That energy is not an accident. It comes from a teaching method that respects how children actually learn: by doing, by playing, and by being challenged kindly.",
-                "In Nursery we follow each child's developmental milestones through purposeful play. In Primary we build unshakable foundations in literacy and numeracy, with continuous, low-pressure assessment, so no child is ever surprised by a report card. In Secondary we prepare our students thoroughly for BECE, WAEC and NECO, while our career guidance office helps them see what lies beyond the classroom.",
-                "Our results are good, but I would rather be remembered for the kind of person our students become. Come and see us. You will meet a team of educators who love exactly what they do.",
+                "My job as Principal is simple to say and serious to do: make sure every child learns properly and leaves each level ready for the next.",
+                "We assess gently but honestly, so no child is ever surprised by a report card. Our Secondary students are prepared thoroughly for BECE, WAEC and NECO.",
+                "Come and see us. You will meet teachers who love exactly what they do.",
               ]}
             />
           </div>
@@ -337,9 +337,9 @@ export default function AboutPage() {
               signature="Princess Oluwasijibomi Gbadebo"
               headingId="headmistress-heading"
               paragraphs={[
-                "Walking through our gates each morning, the first sound you will hear is the one we are proudest of: children being greeted by name. That is the heart of this school. Before lessons begin, every child is known, welcomed and settled.",
-                "My role is to keep the day to day running with care. Timetables, classrooms, meals, transport, parent meetings. Nothing small, and nothing overlooked. I listen to every parent who walks in, because a parent's concern is a priority the moment it is shared.",
-                "The children teach me as much as I teach them. They are curious, generous and full of questions, and they remind me every single day why we do this work. When your child joins our family, they become part of ours too.",
+                "The first sound you will hear at our gate each morning is the one we are proudest of: children being greeted by name. That is the heart of this school.",
+                "Timetables, classrooms, meals, transport, parent meetings. Nothing small, nothing overlooked. A parent's concern is a priority the moment it is shared.",
+                "When your child joins our family, they become part of ours too.",
               ]}
             />
           </div>
