@@ -77,16 +77,7 @@ const INFO_CARDS: Array<{
           <a href={`mailto:${siteConfig.email}`} className="break-all font-semibold text-primary underline">
             {siteConfig.email}
           </a>
-          <span className="block text-xs text-text-muted">General enquiries</span>
-        </li>
-        <li>
-          <a
-            href={`mailto:${siteConfig.admissionsEmail}`}
-            className="break-all font-semibold text-primary underline"
-          >
-            {siteConfig.admissionsEmail}
-          </a>
-          <span className="block text-xs text-text-muted">Admissions</span>
+          <span className="block text-xs text-text-muted">General &amp; admissions enquiries</span>
         </li>
       </ul>
     ),

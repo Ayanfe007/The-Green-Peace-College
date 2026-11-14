@@ -31,8 +31,10 @@ export const siteConfig = {
   // TODO: add a second number here when the school has one.
   phones: [{ label: "Call or WhatsApp", number: "+234 805 652 7803" }],
 
-  email: "hello@thegreenpeaceschool.ng", // TODO: replace
-  admissionsEmail: "admissions@thegreenpeaceschool.ng", // TODO: replace
+  // One school inbox for now (both forms deliver here). Add a second
+  // admissions address in siteConfig if the school gets one later.
+  email: "thegreenpeaceschool@gmail.com",
+  admissionsEmail: "thegreenpeaceschool@gmail.com",
 
   // WhatsApp number (international format, digits). Used for the
   // floating chat button and the contact cards.
