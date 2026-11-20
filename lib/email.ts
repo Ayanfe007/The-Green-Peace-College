@@ -1,5 +1,5 @@
 import { siteConfig } from "./siteConfig";
-import type { ContactData, InquiryData } from "./validation";
+import type { ContactData, InquiryData, QuickEnquiryData } from "./validation";
 
 /**
  * Email delivery for form submissions.
@@ -195,6 +195,42 @@ export async function deliverContact(data: ContactData): Promise<DeliverResult> 
       EMAIL_TO,
       `[Contact] Message from ${data.name}`,
       layout("New contact message", contactBody(data))
+    ),
+  ]);
+
+  results.forEach((r) => {
+    if (r.status === "rejected") console.error("[email] Resend error:", r.reason);
+  });
+  const failed = results.filter((r) => r.status === "rejected").length;
+  return { sent: failed === 0, reason: failed > 0 ? "partial-failure" : undefined };
+}
+
+/* ------------------------ quick enquiry (home page) ------------------------ */
+
+function quickEnquiryBody(data: QuickEnquiryData): string {
+  return `
+  <p>A parent or guardian has just sent a quick enquiry through the home page.</p>
+  ${detailRows([
+    ["Name", data.name],
+    ["Phone", data.phone],
+    ["Enquiring about", data.grade],
+    ["Message", data.message],
+  ])}
+  ${automatedNote()}`;
+}
+
+/** Sends a home-page quick enquiry to the school inbox. */
+export async function deliverQuickEnquiry(data: QuickEnquiryData): Promise<DeliverResult> {
+  if (!RESEND_API_KEY) {
+    dryRun(`[Enquiry] ${data.name} - ${data.grade}`, [EMAIL_TO]);
+    return { sent: false, reason: "no-api-key" };
+  }
+
+  const results = await Promise.allSettled([
+    sendEmail(
+      EMAIL_TO,
+      `[Enquiry] ${data.grade} (from ${data.name})`,
+      layout("New quick enquiry", quickEnquiryBody(data))
     ),
   ]);
 

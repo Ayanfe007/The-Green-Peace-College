@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Navigation, Phone } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { FacebookIcon, InstagramIcon, XIcon, YoutubeIcon } from "@/components/ui/SocialIcons";
@@ -136,6 +136,20 @@ export function Footer() {
                 className="rounded transition-colors hover:text-white"
               >
                 WhatsApp: {siteConfig.whatsapp}
+              </a>
+            </li>
+            <li className="flex gap-3">
+              <Navigation
+                className="mt-0.5 h-4 w-4 shrink-0 text-accent"
+                aria-hidden="true"
+              />
+              <a
+                href={siteConfig.maps.directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded transition-colors hover:text-white"
+              >
+                Get Directions
               </a>
             </li>
           </ul>

@@ -124,7 +124,8 @@ const schoolJsonLd = {
   },
   telephone: siteConfig.phones[0].number,
   email: siteConfig.email,
-  sameAs: Object.values(siteConfig.social),
+  // sameAs: add the school's real social profiles here once they are
+  // live (see siteConfig.social in lib/siteConfig.ts).
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

@@ -21,7 +21,7 @@ export function Hero() {
       {/* Background photo — decorative (the overlay carries the mood). */}
       <Image
         src={images.hero}
-        alt=""
+        alt="Pupils at The Green Peace School, Ifo"
         priority
         fill
         sizes="100vw"

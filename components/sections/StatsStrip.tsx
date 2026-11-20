@@ -3,15 +3,15 @@ import { siteConfig } from "@/lib/siteConfig";
 
 /**
  * Stats strip — deep-green band with the school's headline numbers.
- * TODO: the figures below are placeholders; update them in
- * lib/siteConfig.ts (stats).
+ * Figures come from lib/siteConfig.ts (stats): real, verifiable facts
+ * only, no placeholders.
  */
 export function StatsStrip() {
   const stats = [
     { value: `${siteConfig.stats.years}+`, label: "Years of Excellence" },
-    { value: siteConfig.stats.students, label: "Happy Students" },
-    { value: siteConfig.stats.teachers, label: "Caring Teachers" },
-    { value: siteConfig.stats.passRate, label: "WAEC / NECO Pass Rate" },
+    { value: siteConfig.stats.levels, label: "Levels: Nursery to Secondary" },
+    { value: siteConfig.stats.boards, label: "Exam Boards: WAEC & NECO" },
+    { value: "1", label: "Safe, Green Campus in Ifo" },
   ];
 
   return (

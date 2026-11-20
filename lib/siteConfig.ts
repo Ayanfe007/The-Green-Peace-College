@@ -17,7 +17,11 @@ export const siteConfig = {
   tagline: "Nurturing Minds. Growing Character. Shaping Futures.",
   description:
     "A warm, values-driven Nursery, Primary and Secondary school in Ifo, Ogun State. Raising confident, curious and kind children since 2010.",
-  url: "https://www.thegreenpeaceschool.ng", // TODO: replace with the live domain
+  // TEMPORARY: the live Vercel URL, used for canonical tags, the Open
+  // Graph image and the sitemap, until thegreenpeaceschool.ng is
+  // purchased and pointed at Vercel. Swap this back to
+  // "https://www.thegreenpeaceschool.ng" the moment the domain is live.
+  url: "https://the-green-peace-schools.vercel.app",
   foundedYear: 2010,
 
   address: {
@@ -43,7 +47,7 @@ export const siteConfig = {
 
   hours: [
     { days: "Monday – Friday", time: "7:30am – 4:00pm" },
-    { days: "Saturday", time: "9:00am – 12:00pm (administrations only)" },
+    { days: "Saturday", time: "9:00am – 12:00pm (administration only)" },
     { days: "Sunday & Public Holidays", time: "Closed" },
   ],
 
@@ -64,13 +68,14 @@ export const siteConfig = {
       "https://www.google.com/maps/dir/?api=1&destination=6.722503720791689,3.28741821009195",
   },
 
-  // Placeholder statistics shown on the home page. TODO: replace with
-  // real figures.
+  // Headline figures for the home page. Real, verifiable numbers only:
+  // founded 2010 (16 years by 2026), three levels, two exam boards.
+  // If the school later wants to show real student or teacher counts,
+  // add them here.
   stats: {
-    years: "28",
-    students: "480",
-    teachers: "38",
-    passRate: "98%",
+    years: "16",
+    levels: "3",
+    boards: "2",
   },
 } as const;
 

@@ -146,3 +146,31 @@ export const contactSchema = z.object({
 
 export type ContactInput = z.input<typeof contactSchema>;
 export type ContactData = z.output<typeof contactSchema>;
+
+/** Quick enquiry form (home page): name, phone, class, optional message. */
+export const quickEnquirySchema = z.object({
+  name: z
+    .string()
+    .trim()
+    .min(2, "Please enter your name")
+    .max(80, "Name is too long"),
+
+  phone,
+
+  grade: z
+    .string()
+    .min(1, "Please select the class you are enquiring about"),
+
+  message: z
+    .string()
+    .trim()
+    .max(1000, "Message is too long (1,000 characters max)")
+    .optional()
+    .or(z.literal("")),
+
+  /** Honeypot — must stay empty for a real human. */
+  website: z.string().optional(),
+});
+
+export type QuickEnquiryInput = z.input<typeof quickEnquirySchema>;
+export type QuickEnquiryData = z.output<typeof quickEnquirySchema>;
